@@ -3,6 +3,11 @@ import IMAGE1 from "../IMG/logo.png";
 import { Link } from 'react-router-dom';
 function Signup() {
 
+
+    const validation=()=>{
+        
+    }
+
     return (
         <div>
             <div className="container bg-white w-50 rounded">
@@ -13,13 +18,13 @@ function Signup() {
                     <h4>Sign up</h4>
                 </div>
                 <div class="formdata">
-                    <form class="form-group ">
+                    <form class="form-group" onSubmit={(e) => { e.preventDefault(); return validation() }}>
                         <i class="fa-solid fa-user text-danger"></i>
-                        <input type="text" className="w-100 form-control m-2" placeholder="Name" />
+                        <input type="text" className="w-100 form-control m-2" placeholder="Mobile" />
                         <i class="fa-solid fa-envelope text-danger"></i>
                         <input type="text" className="w-100 form-control m-2" placeholder="Email" />
                         <i class="fa-solid fa-eye text-danger"></i>
-                        <input type="text" className="w-100 form-control m-2" placeholder="Password" />
+                        <input type="password" className="w-100 form-control m-2" placeholder="Password" />
 
                         <div className='row mt-2'>
                             <div className='col-1 e-0'>
