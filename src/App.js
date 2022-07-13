@@ -7,6 +7,7 @@ import Verfied from './components/Verfied';
 import Signup from './components/Signup';
 import Signin from './components/Signin';
 import Forgetpass from './components/Forgetpass';
+import Reset from './components/Reset';
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <Route path='/Signup' element={<Signup/>}/>
         <Route path='/Signin' element={<Signin/>}/>
         <Route path='/Forgetpass' element={<Forgetpass/>}/>
+        <Route path='/Reset' element={<Reset/>}/>
       </Routes>
       </BrowserRouter>
     </div>

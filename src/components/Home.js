@@ -3,6 +3,7 @@ import IMAGE from "../IMG/logo.png";
 import { useState, useRef, useEffect } from 'react';
 import '../CSS/style.css';
 import { GoogleLogin, GoogleLogout } from 'react-google-login';
+import FacebookLogin from 'react-facebook-login';
 import { Link } from 'react-router-dom';
 
 
@@ -29,7 +30,9 @@ const Home = () => {
     };
 
 
-
+    const responseFacebook = (response) => {
+        console.log(response);
+      }
 
 
 
@@ -59,26 +62,37 @@ const Home = () => {
                 </div>
                 <div className="google mt-2">
 
-                    <button className="w-75 text-white rounded border-0 p-2" style={{ backgroundColor: "#EB4747" }}><i class="fa-brands fa-google float-start mt-2"></i>Continue with Google
-                        <div id="samedata">
-                            {showloginButton ?
-                                <GoogleLogin
-                                    clientId={clientId}
-                                    buttonText="Login"
-                                    onSuccess={onLoginSuccess}
-                                    onFailure={onLoginFailure}
-                                    cookiePolicy={'single_host_origin'}
-                                /> : null}
+                    {/* <button className="w-75 text-white rounded border-0 p-2" style={{ backgroundColor: "#EB4747" }}><i class="fa-brands fa-google float-start mt-2"></i>Continue with Google</button> */}
+                    <div id="samedata">
+                        {showloginButton ?
+                            <GoogleLogin
+                                clientId={clientId}
+                                buttonText="Login"
+                                onSuccess={onLoginSuccess}
+                                onFailure={onLoginFailure}
+                                cookiePolicy={'single_host_origin'}
+                            /> : null}
 
-                        </div>
-
-
+                    </div>
 
 
-                    </button>
+
+
+
                 </div>
                 <div className="google mt-2">
-                    <button className="w-75 text-white rounded border-0 p-2" style={{ backgroundColor: "#1F4690" }}><i class="fa-brands fa-facebook-f float-start mt-2"></i>Continue with Facebook</button>
+                    {/* <button className="w-75 text-white rounded border-0 p-2" style={{ backgroundColor: "#1F4690" }}><i class="fa-brands fa-facebook-f float-start mt-2"></i>Continue with Facebook</button> */}
+                    <FacebookLogin
+                        appId="547431080413859"
+                        autoLoad={true}
+                        fields="name,email,picture"
+                        // onClick={componentClicked}
+                        callback={responseFacebook} />
+
+
+
+
+
                 </div>
                 <div className="already mt-5">
                     <p className="p-2">You have already account?<Link to={'/signin'}><a href="#"> Sign in</a></Link></p>

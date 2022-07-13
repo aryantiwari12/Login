@@ -32,9 +32,15 @@ i.fa-solid.fa-eye {
     margin-left: 305px;
     margin-top: 12px;
 }
+i.fa-solid.fa-eye-slash {
+    position: absolute;
+    margin-left: 305px;
+    margin-top: 12px;
+}
 small.hello {
     margin-left: -165px;
 }
 #samedata{
-    width: 200px;
+    width: 300px;
+    margin-left: 250px;
 }

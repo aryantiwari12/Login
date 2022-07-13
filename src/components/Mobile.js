@@ -176,7 +176,7 @@ console.log(otp)
                                         complete ? <i className="fa-solid fa-check text-white rounded col-3 border border-2 ms-auto bg-success p-2 text-center d-flex justify-content-center align-items-center mt-2"></i> : ""
                                     }
                                 </div>
-                                <button className="mt-5" onClick={() => verfied()}>Verfied</button>
+                                <p className="mt-5" onClick={() => verfied()}></p>
                                 <p className='mt-4'>Didn't get a text? <span onClick={onSend}><a href='#'><b>Send again</b></a></span></p>
                             </div>
                         </div>
